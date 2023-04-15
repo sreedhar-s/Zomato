@@ -116,7 +116,7 @@ const LargeNav = () => {
 const Navbar = () => {
   return (
     <>
-      <nav className="p-4 bg-white shadow-md">
+      <nav className="p-4 bg-white">
         <MobileNav />
         <MediumNav />
         <LargeNav />
