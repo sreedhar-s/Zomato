@@ -5,13 +5,13 @@ import { Route, Routes } from 'react-router-dom';
 import HomeLayoutHOC from './HOC/Home.HOC';
 
 //components
-import Temp from './components/temp';
+
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomeLayoutHOC />} />
+        <Route path="/*" element={<HomeLayoutHOC />} />
       </Routes>
     </>
   );
