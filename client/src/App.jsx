@@ -3,6 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 
 //Hoc 
 import HomeLayoutHOC from './HOC/Home.HOC';
+import RestaurantLayoutHOC from './HOC/Restaurant.HOC';
 
 //components
 
@@ -12,7 +13,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Navigate to="/delivery" />} />
-        <Route path="/*" element={<HomeLayoutHOC />} />
+        <Route path="/:type" element={<HomeLayoutHOC />} />
+        <Route path="/restaurant/:id" element={<RestaurantLayoutHOC />} />
       </Routes>
     </>
   );
