@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import PictureCarousalCard from '../PictureCarousal';
 import { NextArrow, PrevArrow } from '../Carousal.Arrow';
 
-const DiningCarousal = () => {
+const NightLifeCarousal = () => {
     const settings = {
         arrows: true,
         infinite: false,
@@ -57,4 +57,4 @@ const DiningCarousal = () => {
   )
 }
 
-export default DiningCarousal;
+export default NightLifeCarousal;

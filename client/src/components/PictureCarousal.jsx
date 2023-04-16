@@ -21,7 +21,7 @@ const PictureCarousalCard = () => {
             </div>
             <div className='absolute bottom-0 text-white'>
                 <h4 className=''>16 Must-visit Legendary Places</h4>
-                <h6>16 Places <IoMdArrowDropright /></h6>
+                <h6 className='flex items-center'>16 Places <IoMdArrowDropright /></h6>
             </div>
         </div>
     </>
