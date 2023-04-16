@@ -16,24 +16,53 @@ const Brand = (props) => {
 
     const settings = {
         arrows: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        initialSlide: 0,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-    };
+        responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 2,
+            },
+        },
+        {
+            breakpoint: 480,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            },
+        },
+        ],
+  };
 
   return (
-    
-    <div className='p-4'>
+    <div className='p-4 my-8'>
+        <h1 className="text-3xl mb-4 font-semibold">
+          Top brands for you
+        </h1>
+
         <Slider {...settings}>
         {logos.map((logo) => (
-            <div className="w-24 h-24 p-2">
+            <div className="w-full h-28 md:h-40 lg:h-56 p-2">
                 <img 
                     src={logo}
                     alt = "brand"
-                    className="w-full h-full object-cover rounded-md"
+                    className="w-full h-full object-cover rounded-lg"
                 />
             </div>
         ))}

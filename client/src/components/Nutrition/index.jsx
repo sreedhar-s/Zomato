@@ -1,12 +1,12 @@
 import React from 'react';
 
 //components
-import NutritionCarousal from './NutritionCarousal';
+import NutritionHeroCarousal from './NutritionHeroCarousal';
 
 const Nutrition = () => {
   return (
     <div>
-        <NutritionCarousal />
+        <NutritionHeroCarousal />
     </div>
   )
 }

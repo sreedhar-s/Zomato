@@ -90,10 +90,17 @@ const Delivery = () => {
   return (
     <>
         <DeliveryCarousal />
-        <div className='flex justify-between flex-wrap'>
-          {restaurantList.map((restaurant) => (
-            <RestaurantCard {...restaurant} key={restaurant.id} />
-          ))}
+        <Brand />
+        
+        <div>
+          <h1 className="text-3xl mb-4 font-semibold">
+            Best Food in Chennai
+          </h1>
+          <div className='flex justify-between flex-wrap'>
+            {restaurantList.map((restaurant) => (
+              <RestaurantCard {...restaurant} key={restaurant.id} />
+            ))}
+          </div>
         </div>
     </>
   )

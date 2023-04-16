@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NutritionCarousalCard = (props) => {
+const NutritionHeroCarousalCard = (props) => {
   return (
     <div className='w-full h-72'>
         <img 
@@ -12,4 +12,4 @@ const NutritionCarousalCard = (props) => {
   )
 }
 
-export default NutritionCarousalCard;
+export default NutritionHeroCarousalCard;

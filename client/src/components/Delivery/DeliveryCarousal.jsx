@@ -45,7 +45,7 @@ const DeliveryCarousal = () => {
 
   return (
     <>
-        <h1 className="text-xl mb-4 font-semibold">
+        <h1 className="text-3xl mb-4 font-semibold">
           Inspiration for your first order
         </h1>
         <div className='lg:hidden flex lg:gap-0 flex-wrap justify-between'>
