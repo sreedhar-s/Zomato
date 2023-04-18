@@ -6,15 +6,6 @@ const Tab = (props) => {
     const {id} = useParams();
     return (
         <>
-            {/* <Link to={`/restaurant/${id}/${props.route}`}>
-                <div className={
-                    classnames("text-gray-500 font-medium", {
-                        "text-zomato-400 font-semibold" : props.isActive 
-                    })
-                }>
-                    <h3 className='text-lg md:text-xl'>{props.title}</h3>
-                </div>
-            </Link> */}
             <Link to={`/restaurant/${id}/${props.route}`}>
                 <div
                     className={classnames("text-gray-500 relative font-medium ", {
@@ -23,7 +14,7 @@ const Tab = (props) => {
                 >
                     <h3 className="text-lg md:text-xl pb-4">{props.title}</h3>
                 </div>
-                </Link>
+            </Link>
         </>
     );
 }
