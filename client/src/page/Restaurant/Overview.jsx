@@ -8,20 +8,56 @@ import ReactStars from "react-rating-stars-component";
 import MenuCollection from './MenuCollection';
 import MenuSimilarRestaurantCard from './MenuSimilarRestaurantCard';
 import { NextArrow, PrevArrow } from '../../components/Carousal.Arrow';
+import ReviewCard from '../../components/restaurant/Reviews/reviewCard';
 
 const Overview = () => {
     const {id} = useParams();
 
-    const settings = {
+    // const settings = {
+    //     arrows: true,
+    //     dots:true,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     nextArrow: <NextArrow />,
+    //     prevArrow: <PrevArrow />,
+    // }
+     const settings = {
         arrows: true,
-        dots:true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
-    }
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                },
+            },
+        ]
+    };
 
     const ratingChanged = (newRating) => {
         console.log(newRating);
@@ -98,6 +134,12 @@ const Overview = () => {
                         size={24}
                         activeColor="#ffd700"
                     />
+                </div>
+
+                <div className='my-8 flex flex-col gap-4'>
+                    <ReviewCard />
+                    <ReviewCard />
+                    <ReviewCard />
                 </div>
           </div>
             </div>
