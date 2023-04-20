@@ -34,3 +34,4 @@ const FoodItem = (props) => {
 }
 
 export default FoodItem;
+
