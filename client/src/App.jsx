@@ -15,11 +15,7 @@ function App() {
         <Route path="/" element={<Navigate to="/delivery" />} />
         <Route path="/restaurant/:id" element={<RedirectRestaurant />} />
         <Route path="/:type" element={<HomeLayoutHOC />} />
-        <Route path="/restaurant/:id/overview" element={<RestaurantLayoutHOC />} />
-        <Route path="/restaurant/:id/order-online" element={<RestaurantLayoutHOC />} />
-        <Route path="/restaurant/:id/review" element={<RestaurantLayoutHOC />} />
-        <Route path="/restaurant/:id/menu" element={<RestaurantLayoutHOC />} />
-        <Route path="/restaurant/:id/photos" element={<RestaurantLayoutHOC />} />
+        <Route path="/restaurant/:id/*" element={<RestaurantLayoutHOC />} />
       </Routes>
     </>
   );

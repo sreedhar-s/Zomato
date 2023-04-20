@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import {IoMdArrowDropright} from "react-icons/io";
+import {IoMdArrowDropright,IoMdCopy} from "react-icons/io";
 import Slider from 'react-slick';
 import ReactStars from "react-rating-stars-component";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 
 //Components
 import MenuCollection from './MenuCollection';
 import MenuSimilarRestaurantCard from './MenuSimilarRestaurantCard';
 import { NextArrow, PrevArrow } from '../../components/Carousal.Arrow';
 import ReviewCard from '../../components/restaurant/Reviews/reviewCard';
+import Mapview from '../../components/restaurant/MapView';
 
 const Overview = () => {
     const {id} = useParams();
@@ -136,35 +136,28 @@ const Overview = () => {
                         activeColor="#ffd700"
                     />
                 </div>
-
+                <div className='my-4 w-full rounded-xl bg-white-300 p-3 shadow-md md:hidden'>
+                    <Mapview 
+                        title="KFC"
+                        address="Shop 124, SN Chetty Street, Opposite Kalmandapam, Royapuram, Chennai"
+                        phno="914443153619"
+                        mapLocation= {[13.121876939642565, 80.29359569318414]}
+                    />
+                </div>
                 <div className='my-8 flex flex-col gap-4'>
                     <ReviewCard />
-                    <ReviewCard />
+                    <ReviewCard />[]
                     <ReviewCard />
                 </div>
           </div>
             </div>
             <aside style={{height: "fit-content"}} className='hidden rounded-xl md:block md:w-2/5 sticky top-2 bg-white-300 p-3 shadow-md'>
-                <div className=''>
-                    <h4 className="text-xl font-medium">Call</h4>
-                    <h5 className='text-zomato-500 text-xl'>+914443153619</h5>
-                </div>
-                <div>
-                    <h4 className="text-xl font-medium">Direction</h4>
-                    <div className='w-full h-64'>
-                        <MapContainer center={[13.121876939642565, 80.29359569318414]} zoom={13} scrollWheelZoom={false}>
-                            <TileLayer
-                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            />
-                            <Marker position={[13.121876939642565, 80.29359569318414]}>
-                                <Popup>
-                                A pretty CSS3 popup. <br /> Easily customizable.
-                                </Popup>
-                            </Marker>
-                        </MapContainer>
-                    </div>
-                </div>
+                <Mapview 
+                    title="KFC"
+                    address="Shop 124, SN Chetty Street, Opposite Kalmandapam, Royapuram, Chennai"
+                    phno= "914443153619"
+                    mapLocation= {[13.121876939642565, 80.29359569318414]}
+                />
             </aside>
         </div>
     </>
