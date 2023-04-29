@@ -5,26 +5,16 @@ import Slider from 'react-slick';
 import ReactStars from "react-rating-stars-component";
 
 //Components
-import MenuCollection from './MenuCollection';
-import MenuSimilarRestaurantCard from './MenuSimilarRestaurantCard';
 import { NextArrow, PrevArrow } from '../../components/Carousal.Arrow';
 import ReviewCard from '../../components/restaurant/Reviews/reviewCard';
 import Mapview from '../../components/restaurant/MapView';
+import MenuCollection from '../../components/restaurant/MenuCollection';
+import MenuSimilarRestaurantCard from '../../components/restaurant/MenuSimilarRestaurantCard';
 
 const Overview = () => {
     const {id} = useParams();
 
-    // const settings = {
-    //     arrows: true,
-    //     dots:true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     nextArrow: <NextArrow />,
-    //     prevArrow: <PrevArrow />,
-    // }
-     const settings = {
+    const settings = {
         arrows: true,
         infinite: false,
         speed: 500,
@@ -82,7 +72,12 @@ const Overview = () => {
                     <MenuCollection 
                         title="Menu" 
                         pages="3"  
-                        image="https://b.zmtcdn.com/data/menus/279/65279/6b977f8ccbda02a1797ef92b999f309f.jpg"
+                        image={[
+                            "https://b.zmtcdn.com/data/menus/279/65279/6b977f8ccbda02a1797ef92b999f309f.jpg",
+                            "https://b.zmtcdn.com/data/menus/279/65279/a814de54999da197096acded28c1d904.jpg",
+                            "https://b.zmtcdn.com/data/menus/279/65279/3acfa79dd9a8f1aa6f94fc3054b8977a.jpg",
+                            "https://b.zmtcdn.com/data/menus/279/65279/1d7a5dd422fd329ce7777969160e6751.jpg"
+                        ]}
                     />
                 </div>
                 <h4 className='text-xl font-medium mb-4'>Cuisines</h4>
