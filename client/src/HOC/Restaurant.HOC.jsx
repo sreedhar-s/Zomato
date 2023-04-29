@@ -7,7 +7,7 @@ import Temp from "../components/temp";
 import Overview from "../page/Restaurant/Overview";
 import OrderOnline from "../page/Restaurant/OrderOnline";
 import Menu from "../page/Restaurant/Menu";
-import Review from "../page/Restaurant/Review";
+import Review from "../page/Restaurant/Reviews";
 import Photos from "../page/Restaurant/Photos";
 
 

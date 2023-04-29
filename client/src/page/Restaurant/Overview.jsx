@@ -66,7 +66,7 @@ const Overview = () => {
 
   return (
     <>
-        <div className='flex flex-col md:flex-row relative'>
+        <div className='flex flex-col gap-10 md:flex-row relative'>
             <div className='w-full md:w-3/5'>
                 <h2 className='font-semibold text-lg md:text-xl my-4'>About this place</h2>
                 <div className='flex justify-between items-center'>
